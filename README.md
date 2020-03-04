@@ -85,3 +85,32 @@ Two types of widgets:
 
 - Stateless - which does not save the state
 - Statefull - which maintains the state - like cookies, login sessions
+
+there are two type of arguments like in python,
+positional aggumaents , named arguments
+
+```dart
+class person {
+
+  String name;
+  var age;
+  String gender;
+  // constructor
+  person({ this.name, this.age, this.gender});
+
+}
+
+void main() {
+  //object
+  var v1 = person(name:"Hashir", age:21, gender:"male");
+}
+```
+
+- Pascel notation
+- class is a widget
+- we are creating a widget tree
+- extend use to inherite
+- this is a builder widget.
+- flutter takes the control on screen pixcels
+- every widget in flutter is actaully a dart class with a - build method.
+- Scaffold is a design widget
