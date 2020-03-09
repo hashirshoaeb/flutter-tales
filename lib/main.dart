@@ -5,11 +5,11 @@ void main() => runApp(MyApp());
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return MyAppState();
+    return _MyAppState();
   }
 }
 
-class MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> {
   var _counter = [0, 0, 0, 0];
 
   Widget build(BuildContext context) {
@@ -53,3 +53,45 @@ class MyAppState extends State<MyApp> {
     ));
   }
 }
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return CupertinoApp(
+//       home: HomePage(),
+//     );
+//   }
+// }
+
+// class HomePage extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return CupertinoTabScaffold(
+//         tabBar: CupertinoTabBar(
+//           items: [
+//             BottomNavigationBarItem(
+//               icon: Icon(CupertinoIcons.bluetooth),
+//               title: Text('data'),
+//             ),
+//             BottomNavigationBarItem(
+//               icon: Icon(CupertinoIcons.book),
+//               title: Text('data'),
+//             ),
+//           ],
+//         ),
+//         tabBuilder: (context, i) {
+//           return CupertinoTabView(
+//             builder: (context) {
+//               return CupertinoPageScaffold(
+//                 navigationBar: CupertinoNavigationBar(
+//                   middle: Text('data'),
+//                 ),
+//                 child: Center(
+//                   child: Text('data $i'),
+//                 ),
+//               );
+//             },
+//           );
+//         });
+//   }
+// }

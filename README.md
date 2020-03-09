@@ -114,3 +114,9 @@ void main() {
 - flutter takes the control on screen pixcels
 - every widget in flutter is actaully a dart class with a - build method.
 - Scaffold is a design widget
+
+Stateless widgets are immutable, meaning that their properties can’t change—all values are final.
+
+Stateful widgets maintain state that might change during the lifetime of the widget. Implementing a stateful widget requires at least two classes: 1) a StatefulWidget class that creates an instance of 2) a State class. The StatefulWidget class is, itself, immutable, but the State class persists over the lifetime of the widget.
+
+- annonymus function jiska koi nam na ho,
