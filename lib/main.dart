@@ -1,3 +1,5 @@
+import 'package:first_app/answer.dart';
+import 'package:first_app/question.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -11,46 +13,58 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var _counter = [0, 0, 0, 0];
+  // int ctr=0;
+
+  void count(int index) {
+    setState(() {
+      _counter[index]++;
+    });
+  }
 
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-      appBar: AppBar(
-        title: Text('My first app'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('My first app'),
+        ),
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: Column(
+            children: <Widget>[
+              new Question(questionType: this._counter[0].toString()),
+              RaisedButton(
+                child: Text('Answer 1'),
+                onPressed: () => count(0),
+              ),
+              Container(
+                child: new Question(
+                  questionType: this._counter[1].toString(),
+                ),
+              ),
+              RaisedButton(
+                child: Text('Answer 2'),
+                onPressed: () => {
+                  setState(() => {_counter[1]++})
+                },
+              ),
+              new Question(questionType: this._counter[2].toString()),
+              RaisedButton(
+                child: Text('Answer 3'),
+                onPressed: () => count(2),
+              ),
+              new Question(questionType: this._counter[3].toString()),
+              new Answer(
+                text: 'Answer 4',
+                onpressed: () => {
+                  setState(() => {_counter[3]++})
+                },
+              )
+            ],
+          ),
+        ),
       ),
-      body: Column(
-        children: <Widget>[
-          Text(this._counter[0].toString()),
-          RaisedButton(
-            child: Text('Answer 1'),
-            onPressed: () => {
-              setState(() => {_counter[0]++})
-            },
-          ),
-          Text(this._counter[1].toString()),
-          RaisedButton(
-            child: Text('Answer 2'),
-            onPressed: () => {
-              setState(() => {_counter[1]++})
-            },
-          ),
-          Text(this._counter[2].toString()),
-          RaisedButton(
-            child: Text('Answer 3'),
-            onPressed: () {
-              setState(() => {_counter[2]++});
-            },
-          ),
-          Text(this._counter[3].toString()),
-          RaisedButton(
-            child: Text('Answer 4'),
-            onPressed: () => {
-              setState(() => {_counter[3]++})
-            },
-          ),
-        ],
-      ),
-    ));
+    );
   }
 }
 

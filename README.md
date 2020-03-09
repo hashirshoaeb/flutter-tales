@@ -120,3 +120,30 @@ Stateless widgets are immutable, meaning that their properties can’t change—
 Stateful widgets maintain state that might change during the lifetime of the widget. Implementing a stateful widget requires at least two classes: 1) a StatefulWidget class that creates an instance of 2) a State class. The StatefulWidget class is, itself, immutable, but the State class persists over the lifetime of the widget.
 
 - annonymus function jiska koi nam na ho,
+- press 'Command' and hover the class object, to
+
+```dart
+class person {
+
+  String name;
+  var age;
+  String gender;
+  // constructor
+  person({ this.name, this.age, this.gender});
+
+  //   person({ this.name}); not possible
+  // customise constructor // we give name to constructor
+  person.oldman({this.name}){
+    this.age = 60;
+  }
+}
+
+void main() {
+  //object
+  var v1 = person(name:"Hashir", age:21, gender:"male");
+  print(v1.age);
+  print(v1.name);
+  var v2 = person.oldman(name: "hashir");
+  print(v2.age);
+}
+```
