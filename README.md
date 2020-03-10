@@ -147,3 +147,16 @@ void main() {
   print(v2.age);
 }
 ```
+
+- final vs const
+  final is called a run time constant. when you code and made final, but you dont know the value to it,
+  but know know what are you assigning to const eg:
+
+```dart
+const value = 5;
+final newvalue = value;
+
+```
+
+Assignment 1 =>
+do the same thing using class and structure
