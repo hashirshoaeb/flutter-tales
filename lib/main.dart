@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './quiz.dart';
 import './result.dart';
+import './asserts/Q.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,41 +15,34 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int _questionIndex = 0;
   // int ctr=0;
-  final questions = const [
-    {
-      'questionText': "What is your favorite color?",
-      'answers': [
-        'black',
-        'white',
-        'yellow',
-      ],
-    },
-    {
-      'questionText': "What is your favorite animal?",
-      'answers': [
-        'bear',
-        'cat',
-        'dog',
-      ],
-    },
-    {
-      'questionText': "What is your favorite food?",
-      'answers': [
-        'bilyaani',
-        'nali boti',
-        'nehari',
-        'choclate',
-      ],
-    },
-    {
-      'questionText': 'which song do you like',
-      'answers': [
-        'mela loot liya',
-        'tyaar ho',
-        'phir seeti bajy gi',
-        'tm jeeeto ya haro',
-      ],
-    },
+  final questions = [
+    new Q(questionText: "What is your favorite color?", answers: [
+      'black',
+      'white',
+      'yellow',
+    ]),
+    new Q(questionText: "What is your favorite color?", answers: [
+      'black',
+      'white',
+      'yellow',
+    ]),
+    new Q(questionText: "What is your favorite animal?", answers: [
+      'bear',
+      'cat',
+      'dog',
+    ]),
+    new Q(questionText: "What is your favorite food?", answers: [
+      'bilyaani',
+      'nali boti',
+      'nehari',
+      'choclate',
+    ]),
+    new Q(questionText: 'which song do you like', answers: [
+      'mela loot liya',
+      'tyaar ho',
+      'phir seeti bajy gi',
+      'tm jeeeto ya haro',
+    ]),
   ];
 
   void answerQuestion() {
