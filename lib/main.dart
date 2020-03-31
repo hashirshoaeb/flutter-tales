@@ -21,11 +21,6 @@ class _MyAppState extends State<MyApp> {
       'white',
       'yellow',
     ]),
-    new Q(questionText: "What is your favorite color?", answers: [
-      'black',
-      'white',
-      'yellow',
-    ]),
     new Q(questionText: "What is your favorite animal?", answers: [
       'bear',
       'cat',
