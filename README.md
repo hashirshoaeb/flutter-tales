@@ -161,3 +161,51 @@ final newvalue = value;
 ## Assignment 1 =>
 
 do the same thing using class and structure [link](https://github.com/hashirshoaeb/flutter-tales/tree/Assignment-1)
+
+## Lab 3
+
+```dart
+// 1. Constructor
+// 2. Named Constructor
+// 3. Setters
+// 4. Getters
+// 5. ApplyBrake (decrement speed)
+// 6. Accelerate (increment speed)
+// . A main()
+
+class Bicycle {
+  double speed;
+  int gear;
+
+  void setGear(int gear){
+    this.gear = gear;
+  }
+  int getGear(){
+    return this.gear;
+  }
+
+  void setSpeed(double speed){
+    this.speed = speed;
+  }
+  double getSpeed(){
+    return this.speed;
+  }
+
+  Bicycle({this.gear, this.speed});
+
+  void applyBrake (int decrement){
+    this.speed = this.speed - decrement;
+  }
+  void accelerate(int increment){
+    this.speed = this.speed + increment;
+  }
+}
+
+void main(){
+  Bicycle mybicycle = new Bicycle(gear: 1, speed:5);
+  print(mybicycle.getSpeed());
+  print(mybicycle.getGear());
+  mybicycle.accelerate(9);
+  print(mybicycle.getSpeed());
+}
+```
