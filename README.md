@@ -177,17 +177,17 @@ class Bicycle {
   double speed;
   int gear;
 
-  void setGear(int gear){
+  set bGear(int gear){
     this.gear = gear;
   }
-  int getGear(){
+  int get bGear{
     return this.gear;
   }
 
-  void setSpeed(double speed){
+  set bSpeed(double speed){
     this.speed = speed;
   }
-  double getSpeed(){
+  double get bSpeed{
     return this.speed;
   }
 
@@ -203,9 +203,9 @@ class Bicycle {
 
 void main(){
   Bicycle mybicycle = new Bicycle(gear: 1, speed:5);
-  print(mybicycle.getSpeed());
-  print(mybicycle.getGear());
+  print(mybicycle.bSpeed);
+  print(mybicycle.bGear);
   mybicycle.accelerate(9);
-  print(mybicycle.getSpeed());
+  print(mybicycle.bSpeed);
 }
 ```

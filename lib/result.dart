@@ -2,25 +2,28 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final finalScore;
-  String _resultText;
 
-  Result(this.finalScore) {
+  Result(this.finalScore);
+
+  String get textPhrase {
+    String resultText;
     if (finalScore >= 26) {
-      _resultText = "Your are awesome";
+      resultText = "Your are awesome";
     } else if (finalScore >= 18) {
-      _resultText = "Your are good";
+      resultText = "Your are good";
     } else if (finalScore >= 14) {
-      _resultText = "Your are OK";
+      resultText = "Your are OK";
     } else {
-      _resultText = "Your need help";
+      resultText = "Your need help";
     }
+    return resultText;
   }
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        _resultText,
+        textPhrase,
         style: TextStyle(fontSize: 26),
       ),
     );
