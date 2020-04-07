@@ -59,6 +59,13 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  void resetQuiz() {
+    setState(() {
+      this._finalScore = 0;
+      this._questionIndex = 0;
+    });
+  }
+
   Widget build(BuildContext context) {
     print(_questionIndex);
     print(questions.length);
@@ -75,7 +82,7 @@ class _MyAppState extends State<MyApp> {
                   question: this.questions,
                   questionIndex: this._questionIndex,
                   answerQuestion: this.answerQuestion)
-              : Result(_finalScore),
+              : Result(_finalScore, this.resetQuiz),
         ),
       ),
     );

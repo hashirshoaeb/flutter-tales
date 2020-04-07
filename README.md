@@ -37,74 +37,29 @@ Shows available emulators.
   $flutter run
 ```
 
+# Task
+
+along reset add more button, name "I'm done", on press open new page with message, "thankyou"
+
+## Assignment 1
+
+instead of using maps, do the same thing using class or structure [link](https://github.com/hashirshoaeb/flutter-tales/tree/Assignment-1)
+
+## [Lab 3](./READMEdocs/lab3.md)
+
 # DART
 
 Everything in dart is object. Programming language is strongly typed.
 Type inference.
 
-Sample code:
+- annonymus function jiska koi nam na ho,
+- press 'Command' and hover the class object, to
 
-```dart
-class person {
+* final vs const
+  final is called a run time constant. when you code and made final, but you dont know the value to it,
+  but know know what are you assigning to const eg:
 
-  String name;
-  var age;
-  String gender;
-
-  person(String name, var age, String gender){
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-  }
-}
-String addNum(var num1, String num2){
-  return (num1 + num2);
-}
-
-void main() {
-//   var value11 = addNum(2.0 , '6');
-//   var value12 = addNum(2.0, '7');
-//   double ans1 = value11 + value12;
-//   print(ans1);
-
-//   var value21 = addNum("2.0" , '6');
-//   var value22 = addNum("2.0", '7');
-//   var ans2 = value21 + value22;
-//   print(ans2);
-//   print("Hello World in DART");
-
-  var v1 = person("Hashir", 21, "male");
-  print(v1.age);
-  print(v1.name);
-  v1.age = "200.1";
-  print(v1.age);
-}
-```
-
-Two types of widgets:
-
-- Stateless - which does not save the state
-- Statefull - which maintains the state - like cookies, login sessions
-
-there are two type of arguments like in python,
-positional aggumaents , named arguments
-
-```dart
-class person {
-
-  String name;
-  var age;
-  String gender;
-  // constructor
-  person({ this.name, this.age, this.gender});
-
-}
-
-void main() {
-  //object
-  var v1 = person(name:"Hashir", age:21, gender:"male");
-}
-```
+# Flutter
 
 - Pascel notation
 - class is a widget
@@ -116,96 +71,15 @@ void main() {
 - Scaffold is a design widget
 
 Stateless widgets are immutable, meaning that their properties can’t change—all values are final.
+Two types of widgets:
 
+- Stateless - which does not save the state
+- Statefull - which maintains the state - like cookies, login sessions
+
+there are two type of arguments like in python,
+positional aggumaents , named arguments
 Stateful widgets maintain state that might change during the lifetime of the widget. Implementing a stateful widget requires at least two classes: 1) a StatefulWidget class that creates an instance of 2) a State class. The StatefulWidget class is, itself, immutable, but the State class persists over the lifetime of the widget.
+flutter has control on each and every pixel of screen.
 
-- annonymus function jiska koi nam na ho,
-- press 'Command' and hover the class object, to
-
-```dart
-class person {
-
-  String name;
-  var age;
-  String gender;
-  // constructor
-  person({ this.name, this.age, this.gender});
-
-  //   person({ this.name}); not possible
-  // customise constructor // we give name to constructor
-  person.oldman({this.name}){
-    this.age = 60;
-  }
-}
-
-void main() {
-  //object
-  var v1 = person(name:"Hashir", age:21, gender:"male");
-  print(v1.age);
-  print(v1.name);
-  var v2 = person.oldman(name: "hashir");
-  print(v2.age);
-}
-```
-
-- final vs const
-  final is called a run time constant. when you code and made final, but you dont know the value to it,
-  but know know what are you assigning to const eg:
-
-```dart
-const value = 5;
-final newvalue = value;
-
-```
-
-## Assignment 1 =>
-
-do the same thing using class and structure [link](https://github.com/hashirshoaeb/flutter-tales/tree/Assignment-1)
-
-## Lab 3
-
-```dart
-// 1. Constructor
-// 2. Named Constructor
-// 3. Setters
-// 4. Getters
-// 5. ApplyBrake (decrement speed)
-// 6. Accelerate (increment speed)
-// . A main()
-
-class Bicycle {
-  double speed;
-  int gear;
-
-  set bGear(int gear){
-    this.gear = gear;
-  }
-  int get bGear{
-    return this.gear;
-  }
-
-  set bSpeed(double speed){
-    this.speed = speed;
-  }
-  double get bSpeed{
-    return this.speed;
-  }
-
-  Bicycle({this.gear, this.speed});
-
-  void applyBrake (int decrement){
-    this.speed = this.speed - decrement;
-  }
-  void accelerate(int increment){
-    this.speed = this.speed + increment;
-  }
-}
-
-void main(){
-  Bicycle mybicycle = new Bicycle(gear: 1, speed:5);
-  print(mybicycle.bSpeed);
-  print(mybicycle.bGear);
-  mybicycle.accelerate(9);
-  print(mybicycle.bSpeed);
-}
-```
+visible widget. => for handling input and output, eg. button
+invisible widget => for handling layout and control eg. column
