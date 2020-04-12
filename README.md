@@ -49,6 +49,38 @@ instead of using maps, do the same thing using class or structure [link](https:/
 
 # DART
 
+## What is Dart
+
+Dart is an **object oriented programming language**. It is primarily used for creating frontend user interfaces. And it is **strongly typed**.
+
+## Variables, Functions, Types
+
+Variables are used to temporarily store data.
+
+```dart
+ var name = 'Hashir';
+ print(name); // Outputs ‘Hashir’
+```
+
+Here, **var** keyword is used to create variable. **Equal(=)** operator is used to assign value to the variable. And **print()** function is used to log the output.
+
+Tip: It's common to use **camelCase** notation to name the variable.
+
+In above example, variable **name** is of type **String**. Since Dart is able to **infer the type though** (because you initialise the variable with a value - 'Hashir'). It can also be written as follows.
+
+```dart
+String name = 'Hashir';
+print(name); // Outputs 'Hashir'
+```
+
+**Types** describe the type of data of a variable. With types, you can ensure that a certain code expression only accepts numbers and the compiler “yells at you” if you pass wrong data.
+
+| Type             |              Example               |                                                                   More Information                                                                    |
+| ---------------- | :--------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
+| String           |       String myName = 'Max';       |                            Holds text. You can use single or double quotes - just be consistent once you made your choice.                            |
+| num, int, double | int age = 30; double price = 9.99; | num refers to “number” - there are two types of numbers in Dart: Integers (numbers without a decimal place) and doubles (numbers with decimal places) |
+| object           |         Person = Person();         |                    Generally, everything in Dart is an object - even an integer. But objects can also be more complex, see below.                     |
+
 Everything in dart is object. Programming language is strongly typed.
 Type inference.
 
