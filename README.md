@@ -75,14 +75,25 @@ print(name); // Outputs 'Hashir'
 
 **Types** describe the type of data of a variable. With types, you can ensure that a certain code expression only accepts numbers and the compiler “yells at you” if you pass wrong data.
 
-| Type             |              Example               |                                                                   More Information                                                                    |
-| ---------------- | :--------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
-| String           |       String myName = 'Max';       |                            Holds text. You can use single or double quotes - just be consistent once you made your choice.                            |
+| Type             | Example                            | More Information                                                                                                                                      |
+| ---------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| String           | String myName = 'Max';             | Holds text. You can use single or double quotes - just be consistent once you made your choice.                                                       |
 | num, int, double | int age = 30; double price = 9.99; | num refers to “number” - there are two types of numbers in Dart: Integers (numbers without a decimal place) and doubles (numbers with decimal places) |
-| object           |         Person = Person();         |                    Generally, everything in Dart is an object - even an integer. But objects can also be more complex, see below.                     |
+| object           | Person = Person();                 | Generally, everything in Dart is an object - even an integer. But objects can also be more complex, see below.                                        |
 
-Everything in dart is object. Programming language is strongly typed.
-Type inference.
+**Functions** allow you to define code snippets which you can call whenever and as often as you want.
+
+```dart
+void sayHello(String name) {
+  print('Hello ' + name);
+}
+```
+
+## Objects & Object-orientation
+
+Dart is an object-oriented programming language - that means that **every value in Dart is an object**, even primitive values like text (= String) or numbers (= Integers and Doubles).
+
+Objects are data structures and created with the help of “Classes” because every object needs a blueprint (=> the class) based on which you can then create (“instantiate”) it.
 
 - annonymus function jiska koi nam na ho,
 - press 'Command' and hover the class object, to
