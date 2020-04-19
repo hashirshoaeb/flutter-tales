@@ -45,7 +45,8 @@ along reset add more button, name "I'm done", on press open new page with messag
 
 instead of using maps, do the same thing using class or structure [link](https://github.com/hashirshoaeb/flutter-tales/tree/Assignment-1)
 
-## [Lab 3](./READMEdocs/lab3.md)
+- [Lab 3](./READMEdocs/lab3.md)
+- [Lab 4](./READMEdocs/lab4.md)
 
 # DART
 
