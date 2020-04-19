@@ -87,6 +87,11 @@ print(name); // Outputs 'Hashir'
 void sayHello(String name) {
   print('Hello ' + name);
 }
+
+double addNumbers(double n1, double n2) {
+  return n1 + n2;
+}
+
 ```
 
 ## Objects & Object-orientation
@@ -94,6 +99,28 @@ void sayHello(String name) {
 Dart is an object-oriented programming language - that means that **every value in Dart is an object**, even primitive values like text (= String) or numbers (= Integers and Doubles).
 
 Objects are data structures and created with the help of “Classes” because every object needs a blueprint (=> the class) based on which you can then create (“instantiate”) it.
+
+```dart
+class Person {
+  var name = 'Max';
+  var age = 30;
+
+  void greet() {
+  print('Hi, I am ' + name + ' and I am ' + age.toString() + ' years old!';
+  }
+}
+```
+
+The class only serves as a blueprint though! On its own, it does not give you an object! Instead, you can now create objects based on this class:
+
+```dart
+void main() {
+  var myself = Person();
+  print(myself.name); // use the . to access class properties & methods
+}
+```
+
+## Positional & Named Arguments
 
 - annonymus function jiska koi nam na ho,
 - press 'Command' and hover the class object, to
