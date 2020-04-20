@@ -47,6 +47,7 @@ instead of using maps, do the same thing using class or structure [link](https:/
 
 - [Lab 3](./READMEdocs/lab3.md)
 - [Lab 4](./READMEdocs/lab4.md)
+- [Lab 5](./READMEdocs/lab5.md)
 
 # DART
 
