@@ -2,54 +2,47 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   @override
-  State<StatefulWidget> createState() {
-    return MyAppState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter App',
+      home: MyHomePage(),
+    );
   }
 }
 
-class MyAppState extends State<MyApp> {
-  var _counter = [0, 0, 0, 0];
-
+class MyHomePage extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
+    var column = Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: <Widget>[
+        Card(
+          color: Colors.red,
+          elevation: 6, // for shadow
+          child: Container(
+            child: Text("Data"),
+            width: double.infinity,
+          ),
+        ),
+        Card(
+          color: Colors.blue,
+          elevation: 6,
+          child: Container(
+            child: Text("Transactional Data"),
+            width: double.infinity,
+          ),
+        ),
+      ],
+    );
+
+    return Scaffold(
       appBar: AppBar(
-        title: Text('My first app'),
+        title: Text('Flutter App'),
       ),
-      body: Column(
-        children: <Widget>[
-          Text(this._counter[0].toString()),
-          RaisedButton(
-            child: Text('Answer 1'),
-            onPressed: () => {
-              setState(() => {_counter[0]++})
-            },
-          ),
-          Text(this._counter[1].toString()),
-          RaisedButton(
-            child: Text('Answer 2'),
-            onPressed: () => {
-              setState(() => {_counter[1]++})
-            },
-          ),
-          Text(this._counter[2].toString()),
-          RaisedButton(
-            child: Text('Answer 3'),
-            onPressed: () {
-              setState(() => {_counter[2]++});
-            },
-          ),
-          Text(this._counter[3].toString()),
-          RaisedButton(
-            child: Text('Answer 4'),
-            onPressed: () => {
-              setState(() => {_counter[3]++})
-            },
-          ),
-        ],
-      ),
-    ));
+      body: column,
+    );
   }
 }
