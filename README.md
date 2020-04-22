@@ -1,6 +1,6 @@
-# first_app
+# Flutter Tales
 
-A new Flutter project.
+A Flutter project for practice and example codes.
 
 ## Getting Started
 
@@ -42,9 +42,13 @@ Shows available emulators.
 - [First App](https://github.com/hashirshoaeb/flutter-tales/tree/master)
 - [Second App](https://github.com/hashirshoaeb/flutter-tales/tree/second_app)
 
-## Assignment 1
+## Assignments
 
-instead of using maps, do the same thing using class or structure [link](https://github.com/hashirshoaeb/flutter-tales/tree/Assignment-1)
+- Assignment 1
+
+  Instead of using maps, do the same thing using class or structure [link](https://github.com/hashirshoaeb/flutter-tales/tree/Assignment-1)
+
+## Labs
 
 - [Lab 3](./READMEdocs/lab3.md)
 - [Lab 4](./READMEdocs/lab4.md)
