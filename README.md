@@ -37,9 +37,10 @@ Shows available emulators.
   $flutter run
 ```
 
-# Task
+# Apps
 
-along reset add more button, name "I'm done", on press open new page with message, "thankyou"
+- [First App](https://github.com/hashirshoaeb/flutter-tales/tree/master)
+- [Second App](https://github.com/hashirshoaeb/flutter-tales/tree/second_app)
 
 ## Assignment 1
 
