@@ -53,6 +53,7 @@ Shows available emulators.
 - [Lab 3](./READMEdocs/lab3.md)
 - [Lab 4](./READMEdocs/lab4.md)
 - [Lab 5](./READMEdocs/lab5.md)
+- [Lab 6](./READMEdocs/lab6.md)
 
 # DART
 
