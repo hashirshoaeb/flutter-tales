@@ -39,8 +39,8 @@ Shows available emulators.
 
 # Apps
 
-- [First App](https://github.com/hashirshoaeb/flutter-tales/tree/master)
-- [Second App](https://github.com/hashirshoaeb/flutter-tales/tree/second_app)
+- [First App - Quiz App](https://github.com/hashirshoaeb/flutter-tales/tree/master)
+- [Second App - Bank Transaction ](https://github.com/hashirshoaeb/flutter-tales/tree/second_app)
 
 ## Assignments
 
@@ -48,13 +48,13 @@ Shows available emulators.
 
   Instead of using maps, do the same thing using class or structure [link](https://github.com/hashirshoaeb/flutter-tales/tree/Assignment-1)
 
-## Labs
+## Lab work
 
-- [Lab 3](./READMEdocs/lab3.md)
-- [Lab 4](./READMEdocs/lab4.md)
-- [Lab 5](./READMEdocs/lab5.md)
-- [Lab 6](./READMEdocs/lab6.md)
-- [Lab 7](./READMEdocs/lab7.md)
+- [Lab 3 - Dart Programming - Classes](./READMEdocs/lab3.md)
+- [Lab 4 - Dart Programming - Classes Inheritance](./READMEdocs/lab4.md)
+- [Lab 5 - Dart Programming - List](./READMEdocs/lab5.md)
+- [Lab 6 - Dart Programming - Abstract Classes and Interfaces](./READMEdocs/lab6.md)
+- [Lab 7 - Dart Programming - Exception Handling](./READMEdocs/lab7.md)
 
 # DART
 
