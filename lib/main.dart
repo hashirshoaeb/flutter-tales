@@ -1,5 +1,7 @@
-import 'package:first_app/transaction.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:first_app/models/transaction.dart';
+import 'package:first_app/widgets/newTransaction.dart';
+import 'package:first_app/widgets/transactionList.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -16,76 +18,28 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  // String titleInput;
+  // String amountInput;
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    List<Transaction> transactions = [
-      Transaction(
-          id: 1, amount: 2000, title: 'SuperMarket', date: new DateTime.now()),
-      Transaction(
-          id: 1, amount: 2000, title: 'SuperMarket', date: new DateTime.now()),
-    ];
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter App'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Card(
-              elevation: 6,
-              color: Colors.green,
-              child: Container(
-                width: double.infinity,
-                child: Text(
-                  "hello",
-                ),
-              )),
-          Column(
-            children: transactions.map((tx) {
-              return Card(
-                child: Row(
-                  children: <Widget>[
-                    Container(
-                      margin:
-                          EdgeInsets.symmetric(vertical: 40, horizontal: 40),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.blue, width: 3),
-                      ),
-                      padding:
-                          EdgeInsets.symmetric(vertical: 31, horizontal: 10),
-                      child: Text(
-                        '\$${tx.amount.toString()}',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.red,
-                        ),
-                      ),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          tx.title,
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.blue,
-                          ),
-                        ),
-                        Text(
-                          DateFormat.yMMMd().format(tx.date),
-                          style: TextStyle(
-                            color: Colors.green,
-                          ),
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              );
-            }).toList(),
-          )
-        ],
+      body: Container(
+        child: Column(
+          children: <Widget>[
+            Card(
+              color: Colors.blue,
+              child: Text("Static data"),
+              elevation: 5,
+            ),
+            NewTransaction(),
+            TransactionList()
+          ],
+        ),
       ),
     );
   }
