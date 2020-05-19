@@ -56,6 +56,7 @@ Shows available emulators.
 - [Lab 6 - Dart Programming - Abstract Classes and Interfaces](./READMEdocs/lab6.md)
 - [Lab 7 - Dart Programming - Exception Handling](./READMEdocs/lab7.md)
 - [Lab 8 - Dart Programming – Functions](./READMEdocs/lab8.md)
+- [Lab 8 - Dart Programming – Maps](./READMEdocs/lab9.md)
 
 # DART
 
