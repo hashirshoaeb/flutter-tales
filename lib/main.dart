@@ -1,9 +1,5 @@
-import 'package:first_app/models/transaction.dart';
-import 'package:first_app/widgets/newTransaction.dart';
-import 'package:first_app/widgets/transactionList.dart';
-// import 'package:flutter/cupertino.dart';
+import 'package:first_app/widgets/userTransaction.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,8 +16,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   // String titleInput;
   // String amountInput;
-  final titleController = TextEditingController();
-  final amountController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,16 +23,17 @@ class MyHomePage extends StatelessWidget {
         title: Text('Flutter App'),
       ),
       body: Container(
-        child: Column(
-          children: <Widget>[
-            Card(
-              color: Colors.blue,
-              child: Text("Static data"),
-              elevation: 5,
-            ),
-            NewTransaction(),
-            TransactionList()
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Card(
+                color: Colors.blue,
+                child: Text("Static data"),
+                elevation: 5,
+              ),
+              UserTransactions(),
+            ],
+          ),
         ),
       ),
     );
