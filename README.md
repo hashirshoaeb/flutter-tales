@@ -1,17 +1,57 @@
-# first_app
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <h1 align="center">Flutter Tales 🚀</h1>
 
-A new Flutter project.
+  <p align="center">
+    A Flutter project for practice and example codes.
+    <br />
+    <br />
+    <a href="https://hashirshoaeb.com">About Me</a>
+    ·
+    <a href="https://github.com/hashirshoaeb/flutter-tales/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/hashirshoaeb/flutter-tales/issues">Request Feature</a>
+  </p>
+</p>
+
+![GitHub contributors](https://img.shields.io/github/contributors/hashirshoaeb/flutter-tales?color=ffcc66&style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/hashirshoaeb/flutter-tales?color=ffcc66&style=for-the-badge)
+[![GitHub forks](https://img.shields.io/github/forks/hashirshoaeb/flutter-tales?style=for-the-badge)](https://github.com/hashirshoaeb/star_book/network)
+[![GitHub issues](https://img.shields.io/github/issues/hashirshoaeb/flutter-tales?color=ffcc66&style=for-the-badge)](https://github.com/hashirshoaeb/star_book/issues)
+[![GitHub license](https://img.shields.io/github/license/hashirshoaeb/flutter-tales?style=for-the-badge)](https://github.com/hashirshoaeb/flutter-tales/blob/master/LICENSE)
+[![Twitter Follow](https://img.shields.io/twitter/follow/hashirshoaeb?color=ffcc66&logo=twitter&logoColor=ffffff&style=for-the-badge)](https://twitter.com/hashirshoaeb)
+
+## Apps
+
+- [Quiz App - Map Object key/value ](https://github.com/hashirshoaeb/flutter-tales/tree/master)
+- [Bank Transaction - List View and Scroller ](https://github.com/hashirshoaeb/flutter-tales/tree/second_app)
+- [Advice App - Async Api Caller ](https://github.com/hashirshoaeb/flutter-tales/tree/async-api-call)
+
+## Lab work
+
+- [Lab 3 - Dart Programming - Classes](./READMEdocs/lab3.md)
+- [Lab 4 - Dart Programming - Classes Inheritance](./READMEdocs/lab4.md)
+- [Lab 5 - Dart Programming - List](./READMEdocs/lab5.md)
+- [Lab 6 - Dart Programming - Abstract Classes and Interfaces](./READMEdocs/lab6.md)
+- [Lab 7 - Dart Programming - Exception Handling](./READMEdocs/lab7.md)
+- [Lab 8 - Dart Programming – Functions](./READMEdocs/lab8.md)
+- [Lab 9 - Dart Programming – Maps](./READMEdocs/lab9.md)
+
+## Assignments
+
+- Assignment 1
+
+  Instead of using maps, do the same thing using class or structure [link](https://github.com/hashirshoaeb/flutter-tales/tree/Assignment-1)
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
+For help getting started with Flutter, view
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
@@ -36,127 +76,3 @@ Shows available emulators.
   $cd first_app
   $flutter run
 ```
-
-# DART
-
-Everything in dart is object. Programming language is strongly typed.
-Type inference.
-
-Sample code:
-
-```dart
-class person {
-
-  String name;
-  var age;
-  String gender;
-
-  person(String name, var age, String gender){
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-  }
-}
-String addNum(var num1, String num2){
-  return (num1 + num2);
-}
-
-void main() {
-//   var value11 = addNum(2.0 , '6');
-//   var value12 = addNum(2.0, '7');
-//   double ans1 = value11 + value12;
-//   print(ans1);
-
-//   var value21 = addNum("2.0" , '6');
-//   var value22 = addNum("2.0", '7');
-//   var ans2 = value21 + value22;
-//   print(ans2);
-//   print("Hello World in DART");
-
-  var v1 = person("Hashir", 21, "male");
-  print(v1.age);
-  print(v1.name);
-  v1.age = "200.1";
-  print(v1.age);
-}
-```
-
-Two types of widgets:
-
-- Stateless - which does not save the state
-- Statefull - which maintains the state - like cookies, login sessions
-
-there are two type of arguments like in python,
-positional aggumaents , named arguments
-
-```dart
-class person {
-
-  String name;
-  var age;
-  String gender;
-  // constructor
-  person({ this.name, this.age, this.gender});
-
-}
-
-void main() {
-  //object
-  var v1 = person(name:"Hashir", age:21, gender:"male");
-}
-```
-
-- Pascel notation
-- class is a widget
-- we are creating a widget tree
-- extend use to inherite
-- this is a builder widget.
-- flutter takes the control on screen pixcels
-- every widget in flutter is actaully a dart class with a - build method.
-- Scaffold is a design widget
-
-Stateless widgets are immutable, meaning that their properties can’t change—all values are final.
-
-Stateful widgets maintain state that might change during the lifetime of the widget. Implementing a stateful widget requires at least two classes: 1) a StatefulWidget class that creates an instance of 2) a State class. The StatefulWidget class is, itself, immutable, but the State class persists over the lifetime of the widget.
-
-- annonymus function jiska koi nam na ho,
-- press 'Command' and hover the class object, to
-
-```dart
-class person {
-
-  String name;
-  var age;
-  String gender;
-  // constructor
-  person({ this.name, this.age, this.gender});
-
-  //   person({ this.name}); not possible
-  // customise constructor // we give name to constructor
-  person.oldman({this.name}){
-    this.age = 60;
-  }
-}
-
-void main() {
-  //object
-  var v1 = person(name:"Hashir", age:21, gender:"male");
-  print(v1.age);
-  print(v1.name);
-  var v2 = person.oldman(name: "hashir");
-  print(v2.age);
-}
-```
-
-- final vs const
-  final is called a run time constant. when you code and made final, but you dont know the value to it,
-  but know know what are you assigning to const eg:
-
-```dart
-const value = 5;
-final newvalue = value;
-
-```
-
-Assignment 1 =>
-do the same thing using class and structure
