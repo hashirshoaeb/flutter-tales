@@ -1,5 +1,7 @@
-import 'package:first_app/widgets/userTransaction.dart';
+import 'package:first_app/widgets/newTransaction.dart';
+import 'package:first_app/widgets/transactionList.dart';
 import 'package:flutter/material.dart';
+import 'models/transaction.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,84 +9,85 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter App',
+      debugShowCheckedModeBanner: false,
+      title: 'Transaction App',
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+        accentColor: Colors.black,
+      ),
       home: MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  // String titleInput;
-  // String amountInput;
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  final List<Transaction> _userTransactions = [];
+
+  void _addNewTransaction(
+      String txTitle, double txAmount, BuildContext _context) {
+    final newTransaction = new Transaction(
+      id: 1,
+      title: txTitle,
+      amount: txAmount,
+      date: new DateTime.now(),
+    );
+    setState(() {
+      _userTransactions.add(newTransaction);
+    });
+    Navigator.pop(_context);
+  }
+
+  void _onAddPressed(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (_context) {
+        return NewTransaction(
+          _addNewTransaction,
+          _context,
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter App'),
+        title: Text('Transaction App'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.add),
+            onPressed: () => _onAddPressed(context),
+          ),
+        ],
       ),
       body: Container(
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               Card(
-                color: Colors.blue,
-                child: Text("Static data"),
+                color: Theme.of(context).backgroundColor,
+                child: Text(
+                  "Static data",
+                  style: TextStyle(fontSize: 20),
+                ),
                 elevation: 5,
               ),
-              UserTransactions(),
+              TransactionList(_userTransactions),
             ],
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () => _onAddPressed(context),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
-
-// import 'package:flutter/material.dart';
-
-// void main() => runApp(MyApp());
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Flutter App',
-//       home: MyHomePage(),
-//     );
-//   }
-// }
-
-// class MyHomePage extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     var column = Column(
-//       mainAxisAlignment: MainAxisAlignment.center,
-//       crossAxisAlignment: CrossAxisAlignment.end,
-//       children: <Widget>[
-//         Card(
-//           color: Colors.red,
-//           elevation: 6, // for shadow
-//           child: Container(
-//             child: Text("Data"),
-//             width: double.infinity,
-//           ),
-//         ),
-//         Card(
-//           color: Colors.blue,
-//           elevation: 6,
-//           child: Container(
-//             child: Text("Transactional Data"),
-//             width: double.infinity,
-//           ),
-//         ),
-//       ],
-//     );
-
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text('Flutter App'),
-//       ),
-//       body: column,
-//     );
-//   }
-// }
