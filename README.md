@@ -37,6 +37,7 @@
 - [Lab 7 - Dart Programming - Exception Handling](./READMEdocs/lab7.md)
 - [Lab 8 - Dart Programming – Functions](./READMEdocs/lab8.md)
 - [Lab 9 - Dart Programming – Maps](./READMEdocs/lab9.md)
+- [Lab 10 - Dart Programming – Sets](./READMEdocs/lab10.md)
 
 ## Assignments
 
