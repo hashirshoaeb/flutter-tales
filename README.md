@@ -28,6 +28,8 @@
 - [Bank Transaction - List View and Scroller ](https://github.com/hashirshoaeb/flutter-tales/tree/second_app)
 - [Advice App - Async Api Caller ](https://github.com/hashirshoaeb/flutter-tales/tree/async-api-call)
 
+- [Permission App - Request App Permissions](https://github.com/hashirshoaeb/flutter-tales/tree/permission)
+
 ## Lab work
 
 - [Lab 3 - Dart Programming - Classes](./READMEdocs/lab3.md)
