@@ -44,9 +44,13 @@
 
 ## Assignments
 
-- Assignment 1
+- [Assignment 1](https://github.com/hashirshoaeb/flutter-tales/tree/Assignment-1)
 
   Instead of using maps, do the same thing using class or structure [link](https://github.com/hashirshoaeb/flutter-tales/tree/Assignment-1)
+
+- [Assignment 2](https://github.com/hashirshoaeb/flutter-tales/tree/Assignment-2)
+
+  To improve the UI of Transaction App [link](https://github.com/hashirshoaeb/flutter-tales/tree/Assignment-2)
 
 ## Getting Started
 
