@@ -24,17 +24,35 @@ class TransactionList extends StatelessWidget {
     return ListView.builder(
       itemBuilder: (ctx, index) {
         return Card(
-          elevation: 10,
+          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 6),
+          color: Colors.grey[100],
+          elevation: 2,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                    child: Text(
+                      _userTransactions[index].title,
+                      style: TextStyle(
+                        fontSize: 34,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      DateFormat.yMMMd().format(_userTransactions[index].date),
+                      style: TextStyle(color: Colors.green),
+                    ),
+                  ),
+                ],
+              ),
               Container(
-                margin: EdgeInsets.symmetric(
-                  vertical: 10,
-                  horizontal: 10,
-                ),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Theme.of(context).buttonColor),
-                ),
                 padding: EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 10,
@@ -42,31 +60,12 @@ class TransactionList extends StatelessWidget {
                 child: Text(
                   "\$${_userTransactions[index].amount}",
                   style: TextStyle(
-                    fontSize: 16,
-                    color: Theme.of(context).primaryColorDark,
-                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w300,
                   ),
                 ),
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 5),
-                    child: Text(
-                      _userTransactions[index].title,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  Text(
-                    DateFormat.yMMMd().format(_userTransactions[index].date),
-                    style: TextStyle(color: Colors.green),
-                  ),
-                ],
-              )
             ],
           ),
         );

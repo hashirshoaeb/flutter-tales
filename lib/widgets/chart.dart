@@ -2,11 +2,21 @@ import 'package:first_app/models/transaction.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:first_app/widgets/chartBar.dart';
+import 'package:pie_chart/pie_chart.dart';
 
 class Chart extends StatelessWidget {
   final List<Transaction> transactions;
 
   Chart(this.transactions);
+
+  Map<String, double> get mappedChartValues {
+    Map<String, double> dataMap = new Map<String, double>();
+    groupedTransactionValue.forEach((element) {
+      dataMap.putIfAbsent(element["day"], () => element["amount"]);
+    });
+    print(dataMap.toString());
+    return dataMap;
+  }
 
   List<Map<String, Object>> get groupedTransactionValue {
     return List<Map<String, Object>>.generate(7, (index) {
@@ -39,19 +49,36 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: groupedTransactionValue.map((value) {
-        return Container(
-          padding: EdgeInsets.all(5),
-          child: ChartBar(
-            value["day"],
-            value["amount"],
-            totalSpending == 0.0
-                ? 0.0
-                : (value["amount"] as double) / totalSpending,
+    return Column(
+      children: <Widget>[
+        Container(
+          alignment: Alignment.centerLeft,
+          child: Padding(
+            padding: EdgeInsets.all(20),
+            child: Text(
+              "Summary",
+              style: TextStyle(
+                fontSize: 38,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
           ),
-        );
-      }).toList(),
+        ),
+        Card(
+          margin: EdgeInsets.symmetric(horizontal: 0, vertical: 10),
+          color: Colors.grey[50],
+          elevation: 0,
+          child: PieChart(
+            dataMap: mappedChartValues,
+            showChartValuesInPercentage: false,
+            chartValueBackgroundColor: Colors.grey[200],
+            chartValueStyle: defaultChartValueStyle.copyWith(
+                color: Colors.blueGrey[900],
+                fontSize: 20,
+                fontWeight: FontWeight.w300),
+          ),
+        ),
+      ],
     );
   }
 }

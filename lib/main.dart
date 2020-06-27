@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Transaction App',
       theme: ThemeData(
-        primarySwatch: Colors.orange,
+        primarySwatch: Colors.amber,
         accentColor: Colors.black,
       ),
       home: MyHomePage(),
@@ -28,23 +28,27 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<Transaction> _userTransactions = [
-    Transaction(id: 1, title: "nice", date: DateTime.now(), amount: 200),
     Transaction(
         id: 1,
-        title: "nice",
+        title: "Eggs",
+        date: DateTime.now().subtract(Duration(days: 2)),
+        amount: 200),
+    Transaction(
+        id: 1,
+        title: "Bread Item",
         date: DateTime.now().add(Duration(days: 1)),
         amount: 200),
     Transaction(
         id: 1,
-        title: "nice",
+        title: "Best Friend",
         date: DateTime.now().subtract(Duration(days: 1)),
         amount: 200),
     Transaction(
         id: 1,
-        title: "nice",
+        title: "Cooler and AC",
         date: DateTime.now().add(Duration(days: 1)),
-        amount: 200),
-    Transaction(id: 1, title: "nice", date: DateTime.now(), amount: 200),
+        amount: 12000),
+    Transaction(id: 1, title: "Mashroom", date: DateTime.now(), amount: 200),
   ];
 
   void _addNewTransaction(
@@ -83,7 +87,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Transaction App'),
+        title: Text(
+          'Transaction App',
+          style: TextStyle(fontWeight: FontWeight.w300, fontSize: 24),
+        ),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add),
@@ -96,6 +103,19 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             children: <Widget>[
               Chart(_recentTransactions),
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Text(
+                    "Recent",
+                    style: TextStyle(
+                      fontSize: 38,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+              ),
               TransactionList(_userTransactions),
             ],
           ),

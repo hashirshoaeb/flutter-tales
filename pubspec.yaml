@@ -28,6 +28,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   intl: ^0.16.1
+  pie_chart: ^3.1.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
